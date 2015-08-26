@@ -1,0 +1,25 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+#	user = ericthewry
+#	email = 1234goal@gmail.com
+[user]
+	name = Eric Campbell
+	email = 1234goal@gmail.com
+[core]
+	excludesfile = /Users/originate/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	last = log -l HEAD
+	cos = "!sh -c \"git checkout $1; git status\""
+	unstage = reset HEAD
+	amend = commit --amend
+	delete = branch -D
+	squash = merge --squash
+[push]
+	default = simple
